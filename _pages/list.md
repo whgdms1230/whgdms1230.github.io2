@@ -63,6 +63,9 @@ toc_sticky: true
 
 ## 5. [Linux](/categories/#linux/)
 * 리눅스 기본 명령어 정리
+* 쉘 스크립트
+* curl
+* debian
 
 ## 6. [C++](/categories/#c++/)
 * 모던 C++과 클래식 C++

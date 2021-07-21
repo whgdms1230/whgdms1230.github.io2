@@ -1,7 +1,7 @@
 # main links
 main:
-  - title: "Profile"
-    url: /profile/
+  - title: "About Me"
+    url: /aboutme/
   - title: "To-do-List"
     url: /list/
   - title: "Categories"

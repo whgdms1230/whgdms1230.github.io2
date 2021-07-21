@@ -16,10 +16,10 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "코딩하는 폴킴입니다"
+title                    : "로봇개발을 위한 공간"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Paul"
+name                     : "jiyong"
 description              : "로봇 개발에 유익한 정보를 전달하고 공유하기 위한 페이지입니다."
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -94,7 +94,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Paul(whgdms1230)"
+  name             : "jiyong(whgdms1230)"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "로봇 소프트웨어 개발자입니다"
   location         : "South Korea"
