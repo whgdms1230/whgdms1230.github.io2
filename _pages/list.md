@@ -66,6 +66,7 @@ toc_sticky: true
 * 쉘 스크립트
 * curl
 * debian
+* 심볼릭 링크
 
 ## 6. [C++](/categories/#c++/)
 * 모던 C++과 클래식 C++
