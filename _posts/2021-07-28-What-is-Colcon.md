@@ -24,7 +24,7 @@ last_modified_at: 2021-07-28T21:52:00
 ## 1. Colcon 이란?
 `colcon`은 command line tool로, 빌드, 테스트, 다수의 소프트웨어 패키지를 사용하는데 workflow를 개선하는데 사용된다. `colcon`은 이런 과정을 자동화하고, 명령을 처리하고, 패키지를 사용하도록 환경을 설정한다.
 
-ROS 2.0에서는 `colcon`을 이용하여 패키지를 빌드한다.
+ROS 2.0에서는 `ament_cmake`를 이용하여 패키지들을 빌드하는데, `ament_cmake`의 사용의 불편함으로 인해, `catkin`이나 `ament` 등의 빌드 방식을 범용적으로 빌드할 수 있는 툴로써 `colcon`을 이용하여 패키지를 빌드한다.
 
 ROS의 workspace는 `src` 폴더 내부에 ROS 패키지들이 들어가게 된다. 이 패키지들을 빌드하기 위하여 workspace 위치(`src`의 상위 폴더)에서 `colcon build`를 하게 되면, `build`, `install`, `log` 폴더들이 생성된다.
 
@@ -33,12 +33,12 @@ ROS의 workspace는 `src` 폴더 내부에 ROS 패키지들이 들어가게 된�
 * `log` : `colcon` 호출에 대한 로그 정보가 기록됨.
 
 빌드 이후에 `install` 폴더에 설치된 패키지들을 ROS 패키지와 함께 사용하기 위해서는 source 명령을 통해 `install` 폴더 내부에 생성된 `setup.bash` 의 환경 설정 내용을 가져와야 한다.
-```
+```bash
 source ~/[workspace_name]/install/setup.bash
 ```
 
-## 2. ROS 프로젝트를 진행하며 사용되는 colcon 명령
-다음은 ROS 프로젝트를 진행하면서 주로 사용되는 build 관련된 command line arguments를 정리하였다.
+## 2. ROS 프로젝트를 진행하며 사용되는 colcon CLI
+다음은 `ROS` 프로젝트를 진행하면서 주로 사용되는 build 관련된 `command line arguments`를 정리하였다.
 
 * `--symlink-install`
 빌드하는 파일들을 복사하지 않고 링크로 연결하여 수정이 용이하도록 하는 명령으로, 해당 명령으로 빌드된 python 파일의 코드는 첫 빌드 이후에 내용이 수정되어도 빌드를 다시 하지 않고도 사용할 수 있다.
