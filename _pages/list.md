@@ -10,7 +10,7 @@ toc_sticky: true
 * **noetic 설치 방법**
 * **catkin에 대한 내용**
 * **CMakeLists.txt 구조, 기능, 작성방법 등**
-* package.xml 구조, 기능, 작성방법 등
+* *package.xml 구조, 기능, 작성방법 등*
 * tf에 대한 내용
 * ros의 토픽, 서비스, 액션, 파라미터
 * launch 파일의 구조
@@ -64,7 +64,7 @@ toc_sticky: true
 * binary release
 
 ## 5. [Linux](/categories/#linux/)
-* 리눅스 기본 명령어 정리
+* *리눅스 기본 명령어 정리*
 * 쉘 스크립트
 * curl
 * debian
