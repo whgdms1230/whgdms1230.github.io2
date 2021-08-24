@@ -1,6 +1,6 @@
 ---
-title:  "ROS 1.0 package.xml 작성 가이드"
-excerpt: "package.xml 파일 작성 방법에 대해 알아보자"
+title:  "Catkin 이란?"
+excerpt: "ROS 1.0 에서 빌드용 툴로 사용되는 catkin에 대해 알아본다."
 toc: true
 toc_sticky: true
 
@@ -8,72 +8,23 @@ categories:
   - ROS 1.0
 tags:
   - ROS 1.0
-  - package.xml
-last_modified_at: 2021-08-09T21:59:00
+  - tools
+last_modified_at: 2021-08-09T21:32:00
 ---
 
 ## 0. 참고 문헌
-*- [package.xml ros wiki pages](http://wiki.ros.org/catkin/package.xml)*
+*- Programming Robots with ROS(Morgan Quigley, Brian Gerkey, William D. Smart)*
 
-*- [REP 140](https://www.ros.org/reps/rep-0140.html)*
+*- [catkin overview ros wiki pages](https://wiki.ros.org/catkin/conceptual_overview)*
 
-*- [catkin 0.6.19 documentation](http://docs.ros.org/en/jade/api/catkin/html/index.html)*
+## 1. Catkin 이란?
+`catkin`은 `ROS`에 사용되는 실행 프로그램, 라이브러리, 스크립트 및 다른 코드에서 사용할 인터페이스를 생성할 수 있도록 하는 `ROS` 빌드 시스템이다. `catkin`은 `CMake` 매크로들과 일반적인 `CMake` workflow에 추가적인 기능을 제공하기 위한 전용 파이썬 스크립트로 구성된다.
 
-## 1. package.xml
-`package.xml` 파일은 패키지의 정보를 담은 `XML` 파일이다. 패키지의 이름, 저작자, 라이선스, 의존성 패키지 등의 정보를 담고 있다.
+## 2. ROS 프로젝트를 진행하며 자주 사용한 catkin CLI
+다음은 `ROS` 프로젝트를 진행하면서 주로 사용되는 `command line arguments`를 정리하였다.
 
-## 2. package.xml 포맷
-`ROS 1.0`에서는 주로 포맷 1과 2를 사용한다. (`ROS 2.0`에서 사용하는 포맷 3을 사용할 수도 있음.)
+* `catkin_create_pkg [package_name] [dependency_package1] [dependency_package2] ...`
+`ROS` 패키지를 생성하는 명령으로, `package_name`으로 패키지를 생성하며, `CMakeLists.txt`와 `package.xml`을 포함한 패키지 폴더를 생성한다. 이 때, 패키지 이름은 모두 소문자를 사용해야하며, 공백이 있으면 안된다.
 
-## 3. 패키지 정보
-* `<?xm version="1.0?>` : `xml` 버전을 명시. 보통 `1.0`을 사용한다.
-* `<package>` or `<package format="2">`: 각각 `format 1`과 `format 2`의 `ROS` 패키지 설정 부분
-* `<name>` : 패키지 이름 명시
-* `<version>` : 패키지의 버전. 패키지를 release 하게 된다면, 버전 관리도 중요하다.
-* `<description>` : 패키지에 대한 간략한 설명
-* `<license>` : 패키지의 라이센스 기재.(BSD, MIT, Apache, ...)
-* `<author>` : 패키지 개발에 참여한 개발자들의 이름과 이메일 주소 기재
-* `<maintainer>` : 패키지 관리자의 이름과 이메일 주소 기재
-* `<url>` : 패키지와 관련된 url 기재.(깃북, 저장소, 웹페이지, ...)
-
-## 4. Dependency
-패키지의 의존성과 관련된 사항을 명시하는 부분이다.
-
-### 4.1 Format 1
-* `<buildtool_depend>` : 빌드 시스템의 의존성 기술. `ROS 1.0`은 `catkin` 빌드 시스템을 사용하므로, `catkin` 입력
-* `<build_depend>` : 패키지 빌드 시 필요한 의존성 패키지 추가
-* `<run_depend>` : 패키지 실행 시 필요한 의존성 패키지 추가
-* `<test_depend>` : 패키지 테스트 시 필요한 의존성 패키지 추가
-
-### 4.2 Format 2
-* `<buildtool_depend>` : 빌드 시스템의 의존성 기술. `ROS 1.0`은 `catkin` 빌드 시스템을 사용하므로, catkin 입력
-* `<depend>` : 반복을 피하기위해 사용되며, `<build_depend>`, `<build_export_depend>`, `<exec_depend>`의 기능을 모두 합친 명령으로, 반복적으로 같은 패키지를 명시하는 것을 피하기 위해 사용된다.
-* `<build_depend>` : 패키지 빌드 시 필요한 의존성 패키지 추가
-* `<build_export_depend>` : 현재 패키지의 의존성 패키지가 다른 패키지의 빌드시 필요한 의존성 패키지인 경우 추가
-* `<exec_depend>` : 패키지 실행 시 필요한 의존성 패키지 추가
-* `<test_depend>` : 패키지 테스트 시 필요한 의존성 패키지 추가
-* `<doc_depend>` : 문서 파일을 빌드하는데 필요한 의존성 패키지 추가
-
-## 5. export
-* `<export>` : ROS에서 명시하지 않은 태그명을 사용할 때 사용, 다양한 패키지 및 서브시스템의 추가 정보를 명시한다. 이 때, 태그의 이름이 해당 태그를 처리하는 패키지와 동일해야 한다.
-
-```bash
-# rviz 태그의 plugin 명시
-<export>
-  <rviz plugin="${prefix}/plugin_description.xml"/>
-</export>
-
-# gazebo_ros 태그의 모델 경로 명시
-<export>
-  <gazebo_ros gazebo_model_path="${prefix}/models"/>
-</export>
-```
-
-## 6. metapackage
-* `<metapackage>` : `<export>` 태그 안에서 사용하는 공식적인 태그. 현재의 패키지가 메타패키지일 경우에만 명시한다.
-
-```bash
-<export>
-  <metapackage/>
-</export>
-```
+* `catkin_make`
+`catkin` 빌드 명령어로, `workspace` 위치에서 해당 명령어로 `workspace` 내부에 있는 패키지들을 빌드할 수 있다.

@@ -10,7 +10,7 @@ toc_sticky: true
 * **noetic 설치 방법**
 * **catkin에 대한 내용**
 * **CMakeLists.txt 구조, 기능, 작성방법 등**
-* *package.xml 구조, 기능, 작성방법 등*
+* **package.xml 구조, 기능, 작성방법 등**
 * tf에 대한 내용
 * ros의 토픽, 서비스, 액션, 파라미터
 * launch 파일의 구조
@@ -28,7 +28,7 @@ toc_sticky: true
 * **foxy 설치 방법**
 * **colcon에 대한 내용(catkin과의 차이)**
 * **CMakeLists.txt 구조, 기능, 작성방법 등**
-* package.xml 구조, 기능, 작성방법 등
+* **package.xml 구조, 기능, 작성방법 등**
 * tf2에 대한 내용
 * ros의 토픽, 서비스, 액션, 파라미터
 * launch.xml 파일 구조
@@ -41,6 +41,7 @@ toc_sticky: true
 * free fleet 과 rmf
 * ros2 기본 명령어
 * 정적라이브러리, 동적 라이브러리 추가 방법
+* json, yaml, xml 파일 등
 
 ## 3. [Robotics](/categories/#robotics/)
 * 로봇동역학 정리(F.K. ~ 역동역학 제어)
@@ -50,7 +51,7 @@ toc_sticky: true
 * 제어공학
 
 ## 4. [github](/categories/#github/)
-* github 명령어 정리(주로 사용하는 명령어)
+* git 명령어 정리(주로 사용하는 명령어)
 * commit message
 * fork 및 pull request 방법
 * 협업 방법 및 organization 계정 운용 방법
@@ -65,10 +66,17 @@ toc_sticky: true
 
 ## 5. [Linux](/categories/#linux/)
 * *리눅스 기본 명령어 정리*
-* 쉘 스크립트
+* 쉘 스크립트, bash
 * curl
 * debian
-* 심볼릭 링크
+* 심볼릭 링크, 하드 링크
+* 환경변수
+* 포어그라운드, 백그라운드
+* cache와 buffer
+* pid
+* vi 편집기 사용 방법
+* ssh 원격 접속
+* wget을 이용한 다운로드
 
 ## 6. [C++](/categories/#c++/)
 * if, switch 문의 이니셜라이저
@@ -81,7 +89,7 @@ toc_sticky: true
 * const 상수, 매개변수
 * 레퍼런스
 * 익셉션
-* 
+
 
 * 모던 C++과 클래식 C++
 * class에 대한 내용
@@ -98,3 +106,7 @@ toc_sticky: true
 * network 구조
 * 동적 라이브러리 / 정적 라이브러리
 * 기타 알고리즘 이론 정리
+
+## 9. [용어정리](/categories/#words/)
+* mssql
+* CMake
