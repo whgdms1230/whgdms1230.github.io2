@@ -13,7 +13,7 @@ toc_sticky: true
 * **package.xml 구조, 기능, 작성방법 등**
 * tf에 대한 내용
 * ros의 토픽, 서비스, 액션, 파라미터
-* launch 파일의 구조
+* **launch 파일의 구조**
 * gazebo 구조 및 urdf, sdf 내용, spawn
 * rviz
 * navgation 구조
@@ -31,7 +31,7 @@ toc_sticky: true
 * **package.xml 구조, 기능, 작성방법 등**
 * tf2에 대한 내용
 * ros의 토픽, 서비스, 액션, 파라미터
-* launch.xml 파일 구조
+* **launch 파일 구조**
 * gazebo와 ignition
 * rviz2
 * navigation2
@@ -42,6 +42,7 @@ toc_sticky: true
 * ros2 기본 명령어
 * 정적라이브러리, 동적 라이브러리 추가 방법
 * json, yaml, xml 파일 등
+* dds
 
 ## 3. [Robotics](/categories/#robotics/)
 * 로봇동역학 정리(F.K. ~ 역동역학 제어)
@@ -65,8 +66,8 @@ toc_sticky: true
 * binary release
 
 ## 5. [Linux](/categories/#linux/)
-* *리눅스 기본 명령어 정리*
-* 쉘 스크립트, bash
+* **리눅스 기본 명령어 정리**
+* *쉘 스크립트, bash*
 * curl
 * debian
 * 심볼릭 링크, 하드 링크

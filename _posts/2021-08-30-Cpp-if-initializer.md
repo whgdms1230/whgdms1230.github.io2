@@ -1,0 +1,32 @@
+---
+title:  "[C++] if 문의 이니셜라이저"
+excerpt: "if 문의 이니셜라이저 기능"
+toc: true
+toc_sticky: true
+
+categories:
+  - Cpp
+tags:
+  - Cpp
+  - programing
+last_modified_at: 2021-08-30T21:40:00
+---
+
+C++17부터 if 문 안에 이니셜라이저를 넣는 기능이 추가되었음.
+
+```
+if (<이니셜라이저> ; <조건문>)
+{
+  <본문>
+}
+```
+
+<이니셜라이저>에서 정의한 변수는 <조건문>과 <본문> 안에서만 사용할 수 있고, if 문 밖에서는 사용할 수 없음.
+
+다음 예시는 <이니셜라이저>로 직원 정보를 가져와서, <조건문>에서 그 직원의 급여가 1000 이상인지 확인하고, 참이라면 <본문>을 실행
+```
+if (Employee employee = GetEmployee() ; employee.salary > 1000)
+{
+  ...
+}
+```

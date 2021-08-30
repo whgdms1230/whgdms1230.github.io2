@@ -25,7 +25,13 @@ I am currently a manager at the CLOBOT Co., Ltd since 2021. I received a B.S and
 * [Ji-Yong Kim, Jung-Yup Kim, "Gait training algorithm based on inverse dynamics of walking rehabilitation robot, DDgo Pro," Intelligent Service Robotics, Vol. 14, pp. 143-155, 2021.](https://doi.org/10.1007/s11370-021-00357-8)
 * [Jung‑Yup Kim, Ji‑Yong Kim, Hyeong‑Sic Kim, Kiwon Park, "Development and Evaluation of a Hybrid Walking Rehabilitation Robot, DDgo Pro," International Journal of Precision Engineering and Manufacturing, Vol. 21, pp. 2105–2115, 2020.](https://doi.org/10.1007/s12541-020-00404-x)
 
-## 5. Research and Development
+## 5. International Conference
+* 김지용, 김정엽, "역동역학 기반의 보행 재활 로봇의 수동 모드 보행 훈련 알고리즘", 한국정밀공학회 학술발표대회 논문집, 2020.09.
+
+## 6. Domestic Conference
+
+
+## 7. Research and Development
 
 ### RMF
 
